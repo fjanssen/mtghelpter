@@ -39,7 +39,7 @@ class Player:
     def asJson(self):
         return {"name": self.name,
                 "decks": [deck for deck in self.colors],
-                "bans": [{ban.name: self.bans[ban] for ban in self.bans}]}
+                "bans": {ban.name: self.bans[ban] for ban in self.bans}}
 
 class Match:
     def __init__(self, p1, p2):
